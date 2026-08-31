@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/recipie-ui.esm.js"></script>
+    <script nomodule src="/build/recipie-ui.js"></script>
+  </head>
+  <body>
+    <h1> hello</h1>
+<recipe-card
+  recipe-title="Test Recipe"
+  image-url="https://via.placeholder.com/300x200"
+  category="Dessert">
+</recipe-card>  
+<rating-star rating="3.5" max-rating="5"></rating-star>
+<br /><br />
+<rating-star rating="0" max-rating="5"></rating-star>
+<div style="display: flex; gap: 1rem; max-width: 900px;">
+  <day-planner day-label="Monday"></day-planner>
+
+  <day-planner
+    day-label="Tuesday"
+    recipe-title="Spaghetti Carbonara"
+    image-url="https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg">
+  </day-planner>
+</div>
+</body>
+</html>
+<script>
+  document.querySelector('recipe-card').addEventListener('favoriteToggled', (e) => {
+    console.log('favoriteToggled fired:', e.detail);
+  });
+</script>

@@ -1,0 +1,24 @@
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.rating-container {
+  cursor: default;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #d1d1d1;
+  cursor: default;
+  transition: transform 0.1s ease-in-out;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star:not(.readonly) {
+  cursor: pointer;
+}
+
+.star:not(.readonly):hover {
+  transform: scale(1.15);
+}
